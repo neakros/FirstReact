@@ -1,12 +1,11 @@
 import './App.scss';
-import MyFirstComponent from "./components/MyFirstComponent/MyFirstComponent";
-import MySecondComponent from "./components/MysecondComponent/MySecondComponent";
+import HW from './components/HW/HW';
+
 
 function App() {
   return (
     <div className="App">
-      <MyFirstComponent />
-        <MySecondComponent/>
+        <HW someText={'Hello React'}/>
     </div>
   );
 }
