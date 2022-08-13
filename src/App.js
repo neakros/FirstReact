@@ -1,11 +1,11 @@
 import './App.scss';
-import HW from './components/HW/HW';
+import Counter from './components/Counter/Counter'
 
 
 function App() {
   return (
     <div className="App">
-        <HW someText={'Hello React'}/>
+      <Counter />
     </div>
   );
 }
