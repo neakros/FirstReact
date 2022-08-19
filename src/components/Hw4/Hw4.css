@@ -1,0 +1,14 @@
+.cat {
+  max-width: 1000px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.deleteBtn {
+  padding: 10px 15px;
+  background-color: darkred;
+  color: white;
+}
+
+/*# sourceMappingURL=Hw4.css.map */
