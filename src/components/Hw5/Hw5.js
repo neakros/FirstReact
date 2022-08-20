@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import './Hw5.scss'
 import Input1 from '../input1/input1'
 import Input2 from '../input2/input2'
@@ -9,11 +9,7 @@ class Hw5 extends Component {
         input1:'',
         input2:'',
         input3:'',
-        // showButton:{
-        //     input1: '',
-        //     input2: '',
-        //     input3: '',
-        // }
+        showJson:'',
     }
 
     inputHandler1 (e) {
@@ -29,32 +25,23 @@ class Hw5 extends Component {
     }
 
     showHandler(e) {
+        let button = this.state.input1 + this.state.input2 + this.state.input3
+        button = JSON.stringify(button)
+        this.setState({showJson: button})
         e.preventDefault()
-        // const {input1Text,input2Number,input3Text} = this.state
-        // this.setState({
-        //     input1Text:'',
-        //     input2Number:'',
-        //     input3Text:'',
-        //     showButton: {
-        //         input1:input1Text,
-        //         input2:input2Number,
-        //         input3:input3Text,
-        //     }
-        // })
     }
 
     render() {
         return (
             <div className={'forms'}>
                 <form>
-                    <Input1 inputHandler1={(e)=>this.inputHandler1(e)} />
-                    <Input2 inputHandler2={(e)=>this.inputHandler2(e)} />
-                    <Input3 inputHandler3={(e)=>this.inputHandler3(e)} />
+                    <Input1 inputHandler1={(e)=>this.inputHandler1(e)} inputValue={this.state.input1} />
+                    <Input2 inputHandler2={(e)=>this.inputHandler2(e)} inputValue={this.state.input2} />
+                    <Input3 inputHandler3={(e)=>this.inputHandler3(e)} inputValue={this.state.input3} />
                     <input onClick={(e)=>this.showHandler(e)} type='submit'/>
                 </form>
-                <h1>{this.state.input1}</h1>
-                <h1>{this.state.input2}</h1>
-                <h1>{this.state.input3}</h1>
+                <h1>{this.state.showJson}</h1>
+
             </div>
         );
     }
