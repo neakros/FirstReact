@@ -1,0 +1,16 @@
+.active {
+  color: green;
+  text-decoration: none;
+}
+
+.not-active {
+  color: black;
+}
+
+.Container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/*# sourceMappingURL=App.css.map */
